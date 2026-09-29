@@ -1,142 +1,41 @@
-@extends('layouts.admin-pesanan')
+@extends('layouts.admin')
 
-@section('title', 'Detail Pesanan - SayaBantu.com')
-
+@section('title', 'Detail Pesanan #' . $id . ' - SayaBantu.com')
+@section('back-url', route('admin.pesanan'))
+@section('back-text', 'Kembali ke Pesanan')
+@section('page-title', 'Detail Pesanan')
+@section('page-subtitle', 'Informasi dan status pemesanan layanan')
 
 {{-- =========================================================
-TOP DETAIL
+     TOP HERO AREA
 ========================================================= --}}
-
-@section('page-top')
-
-<div class="pesanan-top-area">
-
-    {{-- DECORATION --}}
-    <div class="header-circle-one"></div>
-    <div class="header-circle-two"></div>
-
-
-    {{-- =====================================================
-    HEADER
-    ====================================================== --}}
-
-    <header class="relative z-10 px-5 pt-4">
-
-        <div class="header-content">
-
-            <div class="flex items-center">
-
-                {{-- BURGER --}}
-                <button
-                    type="button"
-                    class="header-icon shrink-0"
-                    aria-label="Menu"
-                >
-
-                    <i class="fa-solid fa-bars text-[16px]"></i>
-
-                </button>
-
-
-                {{-- BRAND --}}
-                <div class="ml-2 min-w-0 flex-1">
-
-                    <h1
-                        class="truncate text-[17px] font-bold tracking-tight text-white"
-                    >
-                        SayaBantu.com
-                    </h1>
-
-                </div>
-
-
-                {{-- NOTIFICATION --}}
-                <button
-                    type="button"
-                    class="header-icon relative mr-1 shrink-0"
-                    aria-label="Notifikasi"
-                >
-
-                    <i class="fa-regular fa-bell text-[17px]"></i>
-
-                    <span class="notification-dot"></span>
-
-                </button>
-
-
-                {{-- PROFILE --}}
-                <button
-                    type="button"
-                    class="profile-admin shrink-0"
-                    aria-label="Profil Admin"
-                >
-                    A
-                </button>
-
-            </div>
-
+@section('hero')
+<section class="relative z-10 px-5 pb-5 pt-1">
+    <div class="flex items-start justify-between gap-3 p-4 rounded-[22px] bg-white/[0.08] backdrop-blur-md border border-white/15 shadow-xl">
+        <div>
+            <p class="text-[9px] font-medium text-white/60">
+                Nomor Pesanan
+            </p>
+            <h2 class="mt-1 text-[20px] font-bold tracking-tight text-white flex items-center gap-2">
+                #SB{{ $id }}
+                <span class="text-[10px] font-normal text-white/50">• Servis Rumah</span>
+            </h2>
         </div>
 
-    </header>
-
-
-    {{-- =====================================================
-    DETAIL HEADER
-    ====================================================== --}}
-
-    <section class="relative z-10 px-5 pb-7 pt-7">
-
-        <a
-            href="{{ route('admin.pesanan') }}"
-            class="inline-flex items-center gap-2 text-[10px] font-semibold text-white/75 transition hover:text-white"
-        >
-
-            <i class="fa-solid fa-arrow-left text-[9px]"></i>
-
-            Kembali ke Pesanan
-
-        </a>
-
-
-        <div class="mt-6 flex items-start justify-between gap-3">
-
-            <div>
-
-                <p class="text-[9px] font-medium text-white/55">
-                    Nomor Pesanan
-                </p>
-
-                <h2 class="mt-1 text-[21px] font-bold tracking-tight text-white">
-                    #SB{{ $id }}
-                </h2>
-
-            </div>
-
-
-            <span
-                class="mt-1 inline-flex shrink-0 items-center rounded-full border border-yellow-300/20 bg-yellow-300/10 px-3 py-1.5 text-[8px] font-semibold text-yellow-200"
-            >
-                Diproses
-            </span>
-
-        </div>
-
-    </section>
-
-</div>
-
+        <span class="mt-1 inline-flex shrink-0 items-center rounded-full border border-amber-300/30 bg-amber-400/15 px-3 py-1 text-[8.5px] font-semibold text-amber-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-400 mr-1.5 animate-pulse"></span>
+            Diproses
+        </span>
+    </div>
+</section>
 @endsection
 
-
-
 {{-- =========================================================
-CONTENT DETAIL
-PUTIH DIMULAI DI SINI
+     CONTENT DETAIL
 ========================================================= --}}
-
 @section('content')
 
-<main class="detail-main">
+<div class="detail-main space-y-4">
 
 
     {{-- =====================================================
@@ -651,6 +550,6 @@ PUTIH DIMULAI DI SINI
 
     </section>
 
-</main>
+</div>
 
 @endsection

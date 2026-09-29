@@ -1,112 +1,14 @@
-@extends('layouts.admin-pembayaran')
+@extends('layouts.admin')
 
 @section('title', 'Pembayaran - SayaBantu.com')
-
+@section('page-title', 'Pembayaran')
+@section('page-subtitle', 'Pantau pembayaran dan kondisi dana SayaBantu.com.')
 
 {{-- =========================================================
-     TOP AREA
+     TOP HERO AREA
 ========================================================= --}}
 
-@section('page-top')
-
-<div class="pembayaran-top-area">
-
-
-    {{-- DECORATION --}}
-
-    <div class="header-circle-one"></div>
-
-    <div class="header-circle-two"></div>
-
-
-    {{-- =====================================================
-         HEADER
-    ====================================================== --}}
-
-    <header class="px-5 pt-4">
-
-        <div class="header-content flex items-center w-full">
-
-
-            {{-- BURGER --}}
-
-            <button
-                type="button"
-                class="header-icon"
-                aria-label="Menu"
-            >
-
-                <i class="fa-solid fa-bars text-[16px]"></i>
-
-            </button>
-
-
-            {{-- BRAND --}}
-
-            <div class="ml-2 flex-1 min-w-0">
-
-                <h1
-                    class="
-                        overflow-hidden
-                        whitespace-nowrap
-                        text-ellipsis
-                        text-[17px]
-                        font-bold
-                        tracking-tight
-                        text-white
-                    "
-                >
-                    SayaBantu.com
-                </h1>
-
-            </div>
-
-
-            {{-- NOTIFICATION --}}
-
-            <button
-                type="button"
-                class="header-icon relative mr-[5px]"
-                aria-label="Notifikasi"
-            >
-
-                <i class="fa-regular fa-bell text-[17px]"></i>
-
-                <span class="notification-dot"></span>
-
-            </button>
-
-
-            {{-- PROFILE --}}
-
-            <button
-                type="button"
-                class="profile-admin"
-                aria-label="Profil Admin"
-            >
-                A
-            </button>
-
-        </div>
-
-    </header>
-
-
-    {{-- =====================================================
-         HEADING
-    ====================================================== --}}
-
-    <section class="pembayaran-heading">
-
-        <h2>
-            Pembayaran
-        </h2>
-
-        <p>
-            Pantau pembayaran dan kondisi dana SayaBantu.com.
-        </p>
-
-    </section>
+@section('hero')
 
 
     {{-- =====================================================
@@ -158,7 +60,7 @@
                 </div>
 
 
-                <p class="balance-value">
+                <p class="balance-value" data-rt-stat="admin_balance">
                     Rp8.450.000
                 </p>
 
@@ -199,7 +101,7 @@
                     Dana Ditahan
                 </p>
 
-                <p class="summary-payment-number">
+                <p class="summary-payment-number" data-rt-stat="held_funds">
                     Rp2,15 jt
                 </p>
 
@@ -218,7 +120,7 @@
                     Dana Masuk
                 </p>
 
-                <p class="summary-payment-number">
+                <p class="summary-payment-number" data-rt-stat="inflow_funds">
                     Rp12,75 jt
                 </p>
 
@@ -237,7 +139,7 @@
                     Dana Keluar
                 </p>
 
-                <p class="summary-payment-number">
+                <p class="summary-payment-number" data-rt-stat="outflow_funds">
                     Rp4,30 jt
                 </p>
 
@@ -278,7 +180,7 @@
                     Menunggu
                 </p>
 
-                <p class="status-payment-number">
+                <p class="status-payment-number" data-rt-stat="payment_pending">
                     8
                 </p>
 
@@ -293,7 +195,7 @@
                     Berhasil
                 </p>
 
-                <p class="status-payment-number">
+                <p class="status-payment-number" data-rt-stat="payment_success">
                     32
                 </p>
 
@@ -308,7 +210,7 @@
                     Gagal
                 </p>
 
-                <p class="status-payment-number">
+                <p class="status-payment-number" data-rt-stat="payment_failed">
                     3
                 </p>
 
@@ -367,8 +269,6 @@
 
     </section>
 
-</div>
-
 @endsection
 
 
@@ -379,7 +279,7 @@
 
 @section('content')
 
-<main class="pembayaran-main">
+<div class="pembayaran-main space-y-3">
 
 
     {{-- =====================================================
@@ -394,7 +294,7 @@
                 Daftar Pembayaran
             </h3>
 
-            <p class="mt-1 text-[8px] text-white">
+            <p class="mt-1 text-[9px] text-slate-500">
                 Klik pembayaran untuk melihat detail.
             </p>
 
@@ -722,7 +622,7 @@
     </div>
 
 
-</main>
+</div>
 
 @endsection
 

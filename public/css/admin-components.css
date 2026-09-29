@@ -1,0 +1,702 @@
+/* =========================================================================
+   SAYABANTU.COM - ADMIN UNIFIED COMPONENTS STYLESHEET
+   Styling seragam untuk seluruh halaman: Pesanan, Pembayaran, Konflik,
+   Mitra, Pengguna, Review, Profil, Detail, Tab, Card, & Animasi Realtime.
+========================================================================= */
+
+/* =====================================================
+   HERO / HEADING SECTION DI DALAM TOP AREA
+===================================================== */
+.pesanan-heading,
+.pembayaran-heading,
+.page-heading-section,
+.activity-area {
+    position: relative;
+    z-index: 10;
+    padding: 12px 20px 14px;
+}
+
+.pesanan-heading h2,
+.pembayaran-heading h2,
+.page-heading-section h2,
+.activity-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.pesanan-heading p,
+.pembayaran-heading p,
+.page-heading-section p,
+.activity-subtitle {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.72);
+    margin-top: 4px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* =====================================================
+   SUMMARY CARDS (5 KARTU BERJEJER PRESISI)
+===================================================== */
+.pesanan-summary,
+.pembayaran-summary {
+    position: relative;
+    z-index: 10;
+    padding: 0 16px 12px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+}
+
+.summary-card {
+    padding: 9px 4px 10px;
+    border-radius: 13px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(10px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.summary-label {
+    font-size: 8px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.90);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1;
+}
+
+.summary-number {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1;
+}
+
+.summary-blue { background: rgba(37, 99, 235, 0.30); border-color: rgba(96, 165, 250, 0.45); }
+.summary-yellow { background: rgba(234, 179, 8, 0.28); border-color: rgba(250, 204, 21, 0.45); }
+.summary-orange { background: rgba(249, 115, 22, 0.30); border-color: rgba(251, 146, 60, 0.45); }
+.summary-green { background: rgba(22, 163, 74, 0.30); border-color: rgba(74, 222, 128, 0.45); }
+.summary-red { background: rgba(220, 38, 38, 0.30); border-color: rgba(248, 113, 113, 0.45); }
+
+/* =====================================================
+   FILTER TABS (DI DALAM TOP AREA)
+===================================================== */
+.pesanan-filter,
+.pembayaran-filter {
+    position: relative;
+    z-index: 10;
+    padding: 0 16px 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.pesanan-filter-inner,
+.pembayaran-filter-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-bottom: 2px;
+    width: 100%;
+}
+
+.pembayaran-filter-inner {
+    flex-wrap: nowrap;
+}
+
+.mitra-filter-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.mitra-filter-tabs .mitra-filter-tab {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+}
+
+.filter-item {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.82);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    transition: all 0.18s ease;
+    cursor: pointer;
+}
+
+.filter-item:hover {
+    background: rgba(255, 255, 255, 0.24);
+    color: #FFFFFF;
+}
+
+.filter-item.active {
+    color: #0E1D31;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================================================
+   ORDER CARDS & SECTION HEADERS
+===================================================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.section-count {
+    font-size: 9px;
+    font-weight: 600;
+    color: #475569;
+    background: #E2E8F0;
+    padding: 3px 9px;
+    border-radius: 9999px;
+}
+
+.order-card {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+}
+
+.order-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+    transform: translateY(-1.5px);
+}
+
+.order-card-top {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.order-number {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0E1D31;
+    margin: 0;
+}
+
+.order-date {
+    font-size: 9px;
+    color: #94A3B8;
+    margin: 2px 0 0;
+}
+
+.order-status {
+    font-size: 8.5px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    line-height: 1.2;
+}
+
+.status-process { color: #B45309; background: #FFF7DB; border: 1px solid #FDE68A; }
+.status-success { color: #15803D; background: #ECFDF3; border: 1px solid #BBF7D0; }
+.status-waiting { color: #1D4ED8; background: #EFF6FF; border: 1px solid #BFDBFE; }
+.status-conflict { color: #B91C1C; background: #FEF2F2; border: 1px solid #FECACA; }
+
+.order-card-body {
+    padding: 10px 0;
+}
+
+.order-service {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 6px 0;
+}
+
+.order-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #64748B;
+    margin-top: 3px;
+}
+
+.order-detail i {
+    width: 14px;
+    text-align: center;
+    color: #94A3B8;
+    font-size: 10px;
+}
+
+.order-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.order-price-label {
+    font-size: 8px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.order-price {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0E1D31;
+    margin: 3px 0 0;
+    line-height: 1;
+}
+
+.detail-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #1D4ED8;
+    background: #EFF6FF;
+    border: 1px solid #DBEAFE;
+    transition: all 0.18s ease;
+}
+
+.detail-button:hover {
+    background: #DBEAFE;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+.empty-state {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: #94A3B8;
+    background: #F1F5F9;
+}
+
+.empty-state h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+    margin: 0;
+}
+
+.empty-state p {
+    font-size: 9px;
+    color: #94A3B8;
+    margin-top: 4px;
+}
+
+/* =====================================================
+   DETAIL PAGE COMPONENTS
+===================================================== */
+.detail-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.045);
+}
+
+.detail-card + .detail-card {
+    margin-top: 14px;
+}
+
+/* =====================================================
+   REALTIME ANIMATIONS
+===================================================== */
+@keyframes sbBump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.18); color: #0284c7; }
+    100% { transform: scale(1); }
+}
+
+.sb-counter-bump {
+    animation: sbBump 0.45s ease-out;
+}
+
+@keyframes sbHighlight {
+    0% { background-color: rgba(56, 189, 248, 0.25); }
+    100% { background-color: transparent; }
+}
+
+.sb-item-highlight {
+    animation: sbHighlight 2.5s ease-out;
+}
+
+/* =====================================================
+   PEMBAYARAN COMPONENTS
+===================================================== */
+.pembayaran-balance {
+    position: relative;
+    z-index: 10;
+    padding: 0 16px 14px;
+}
+
+.balance-card {
+    position: relative;
+    overflow: hidden;
+    padding: 16px 18px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.06) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.balance-circle-one {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    right: -40px;
+    top: -50px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.22), transparent 70%);
+    pointer-events: none;
+}
+
+.balance-circle-two {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: -30px;
+    bottom: -40px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.15), transparent 70%);
+    pointer-events: none;
+}
+
+.balance-content {
+    position: relative;
+    z-index: 2;
+}
+
+.balance-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+}
+
+.balance-subtitle {
+    font-size: 8.5px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 1px 0 0;
+}
+
+.balance-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+    margin: 10px 0 12px;
+    line-height: 1;
+}
+
+.balance-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.balance-description {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.70);
+    margin: 0;
+}
+
+.balance-active {
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    color: #34D399;
+    background: rgba(16, 185, 129, 0.20);
+    border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+/* 3-Column Payment Summary */
+.summary-grid-payment {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.summary-payment-card {
+    padding: 10px 8px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+}
+
+.summary-payment-label {
+    font-size: 8.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.summary-payment-number {
+    font-size: 14px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 4px 0 2px;
+}
+
+.summary-payment-description {
+    font-size: 7.5px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.summary-payment-yellow {
+    background: rgba(234, 179, 8, 0.18);
+    border-color: rgba(250, 204, 21, 0.30);
+}
+.summary-payment-yellow .summary-payment-description { color: #FDE047 !important; }
+
+.summary-payment-green {
+    background: rgba(22, 163, 74, 0.18);
+    border-color: rgba(74, 222, 128, 0.30);
+}
+.summary-payment-green .summary-payment-description { color: #86EFAC !important; }
+
+.summary-payment-blue {
+    background: rgba(37, 99, 235, 0.18);
+    border-color: rgba(96, 165, 250, 0.30);
+}
+.summary-payment-blue .summary-payment-description { color: #93C5FD !important; }
+
+/* Status Transaksi */
+.pembayaran-status {
+    position: relative;
+    z-index: 10;
+    padding: 0 16px 12px;
+}
+
+.pembayaran-status-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.pembayaran-status-subtitle {
+    font-size: 8.5px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 2px 0 8px;
+}
+
+.status-payment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.status-payment-card {
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-payment-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.status-payment-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Filter buttons */
+.payment-filter {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 5px 14px;
+    border-radius: 9999px;
+    font-size: 9.5px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.80);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    transition: all 0.18s ease;
+    cursor: pointer;
+}
+
+.payment-filter:hover {
+    background: rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+}
+
+.payment-filter.active-filter {
+    color: #0E1D31;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+/* Review rating stars */
+.review-card .fa-solid.fa-star {
+    color: #FBBF24 !important;
+}
+
+/* Payment Items in Content Area */
+.section-header-payment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.section-title-payment {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0E1D31;
+    margin: 0;
+}
+
+.section-count-payment {
+    font-size: 9px;
+    font-weight: 600;
+    color: #475569;
+    background: #E2E8F0;
+    padding: 3px 9px;
+    border-radius: 9999px;
+}
+
+.payment-card {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.payment-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.09);
+    transform: translateY(-1.5px);
+}
+
+.payment-number {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0E1D31;
+    margin: 0;
+}
+
+.payment-order {
+    font-size: 9px;
+    color: #64748B;
+    margin: 2px 0 0;
+}
+
+.payment-status-badge {
+    font-size: 8.5px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 9999px;
+}
+
+.payment-status-waiting {
+    color: #B45309;
+    background: #FFF7DB;
+    border: 1px solid #FDE68A;
+}
+
+.payment-status-success {
+    color: #15803D;
+    background: #ECFDF3;
+    border: 1px solid #BBF7D0;
+}
+
+.payment-status-failed {
+    color: #B91C1C;
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+}
+
+.payment-method-label,
+.payment-total-label {
+    font-size: 8px;
+    color: #94A3B8;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
+
+.payment-method {
+    font-size: 10px;
+    font-weight: 600;
+    color: #334155;
+    margin: 2px 0 0;
+}
+
+.payment-total {
+    font-size: 13px;
+    font-weight: 800;
+    color: #0E1D31;
+    margin: 2px 0 0;
+}
